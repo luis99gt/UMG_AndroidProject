@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UMGAppProject</string>
+    <string name="user">User:</string>
+    <string name="login">LOGIN</string>
+    <string name="nombres">Nombres:</string>
+    <string name="usuario">Usuario:</string>
+    <string name="apellidos">Apellidos:</string>
+    <string name="password">Password:</string>
+    <string name="date">Fecha de Nacimiento:</string>
+    <string name="registrar">Registrar</string>
+</resources>
