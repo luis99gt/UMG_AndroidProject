@@ -30,5 +30,11 @@ public class Registro extends AppCompatActivity {
         ConexionLogin conexionLogin = new ConexionLogin(this);
         conexionLogin.execute(tipoOperacion, str_nombre, str_apellidos,str_edad,str_username,str_password);
 
+        nombres.setText("");
+        apellidos.setText("");
+        edad.setText("");
+        username.setText("");
+        password.setText("");
+
     }
 }

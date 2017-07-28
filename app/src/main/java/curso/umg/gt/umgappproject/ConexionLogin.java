@@ -2,6 +2,7 @@ package curso.umg.gt.umgappproject;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
@@ -118,14 +119,25 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
     protected void onPreExecute() {
 //        super.onPreExecute();
         alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Login Statuss");
+        alertDialog.setTitle("Estado");
     }
 
     @Override
     protected void onPostExecute(String result) {
-//        super.onPostExecute(aVoid);
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        if(result.toString().equals("admin"))
+        {
+            Intent i = new Intent(context, ListaUsuarios.class);
+            context.startActivity(i);
+        }else if(result.toString().equals("user")){
+            Intent u = new Intent(context, Registro.class);
+            context.startActivity(u);
+        }
+        else
+        {
+            alertDialog.setMessage(result);
+            alertDialog.show();
+        }
+
     }
 
     @Override
